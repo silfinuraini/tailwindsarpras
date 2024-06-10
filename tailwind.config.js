@@ -1,10 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./pages/**/*.{html,js}"],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dark: "#1d232a",
+      },
+    },
   },
   plugins: [
-    require('daisyui'),
+    require("daisyui"),
+    "prettier-plugin-tailwindcss",
   ],
+  
 }
+
