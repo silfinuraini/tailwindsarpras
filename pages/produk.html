@@ -19,26 +19,6 @@
 <body>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
         <div class="flex flex-col flex-1 w-full">
-            <header class="z-10 py-4 bg-white border dark:bg-gray-800">
-                <div
-                    class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300">
-
-                    <!-- Search input -->
-                    <div class="flex justify-center flex-1">
-                        <div class="relative w-full max-w-xl focus-within:text-purple-500">
-                            <label class="input input-bordered flex items-center gap-2">
-                                <input type="text" class="grow" placeholder="Search" />
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                    class="w-4 h-4 opacity-70">
-                                    <path fill-rule="evenodd"
-                                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </header>
 
             <!-- Navbar -->
             <div class="navbar bg-base-100 border">
@@ -48,7 +28,7 @@
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 17 14">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
                             </svg>
                         </div>
                         <ul tabindex="0"
@@ -64,23 +44,23 @@
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">daisyUI</a>
+                    <a class="btn btn-ghost text-xl font-bold">Sarpras </a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        class="flex flex-col md:p-0 mt-4 font-medium border text-sm border-gray-100 rounded-box bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
                             <a href="kepala-unit-index.html"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
                         </li>
                         <li>
                             <a href="produk.html"
-                                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                                class="block py-2 px-3 font-bold bg-purple-700 rounded md:bg-transparent text-purple-700 md:p-0 md:dark:text-purple-500"
                                 aria-current="page">Produk</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                            <a href="kontak.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:purple-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Kontak</a>
                         </li>
                     </ul>
                 </div>
@@ -89,7 +69,7 @@
                         <!-- Theme toggler -->
                         <li class="flex">
                             <button class="rounded-md focus:outline-none focus:shadow-outline-purple"
-                                @click="toggleTheme" aria-label="Toggle color mode">
+                                @click="toggleTheme" aria-label="Toggle color mode" fdprocessedid="o3a6jh">
                                 <template x-if="!dark">
                                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
@@ -103,6 +83,7 @@
                                             clip-rule="evenodd"></path>
                                     </svg>
                                 </template>
+                                </svg>
                             </button>
                         </li>
                         <!-- Notifications menu -->
@@ -110,7 +91,7 @@
                             <button
                                 class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
                                 @click="toggleNotificationsMenu" @keydown.escape="closeNotificationsMenu"
-                                aria-label="Notifications" aria-haspopup="true">
+                                aria-label="Notifications" aria-haspopup="true" fdprocessedid="rlqaie">
                                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                     <path
                                         d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z">
@@ -158,10 +139,10 @@
                         <li class="relative">
                             <button class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
                                 @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account"
-                                aria-haspopup="true">
+                                aria-haspopup="true" fdprocessedid="u2o79h">
                                 <img class="object-cover w-8 h-8 rounded-full"
-                                    src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82"
-                                    alt="" aria-hidden="true" />
+                                    src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=200&amp;fit=max&amp;s=aa3a807e1bbdfd4364d1f449eaa96d82"
+                                    alt="" aria-hidden="true">
                             </button>
                             <template x-if="isProfileMenuOpen">
                                 <ul x-transition:leave="transition ease-in duration-150"
@@ -217,259 +198,207 @@
             </div>
 
             <!-- Main -->
-            <main class="h-full overflow-y-auto bg-gray-100">
+            <main class="h-full  overflow-y-auto bg-gray-50">
 
                 <div class="container mx-auto grid mt-5 my-10">
 
+                    <div class="justify-center flex gap-2">
+                        <label class="input shadow-sm flex items-center w-full input-bordered justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-3 h-3 opacity-70"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                            </svg>
+                            <input type="text" class="grow text-sm" placeholder="Cari barang">
+                        </label>
+                        <select class="select select-bordered select-ghost ml-auto bg-white">
+                            <option disabled selected>Order by</option>
+                            <option>A-Z</option>
+                            <option>Z-A</option>
+                        </select>
+                        <select class="select select-bordered select-ghost ml-auto bg-white max-w-xs">
+                            <option disabled selected>Kategori</option>
+                            <option>ATK</option>
+                            <option>Alat kebersihan</option>
+                            <option>Alat bangunan</option>
+                        </select>
+                    </div>
+
                     <div class="divider divider-start">A</div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-/90">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div
+                            class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg w-full"
+                                    src="data:image/jpeg;base64,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"
+                                    alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Alat pel</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                    dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                    nisi </p>
+                                <div class="flex gap-2">
+
+                                    <button
+                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                        aria-label="Edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                            class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        </svg>
+                                    </button>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                        Tambahkan
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="divider divider-start">B</div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div
+                            class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg w-full"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZz-1Yc9atP-9_OmCGnH6sf42A9uGhmp8hCg&s"
+                                    alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Buku tulis</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                    dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                    nisi </p>
+                                <div class="flex gap-2">
 
-                    <div class="divider divider-start">C</div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 ">
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="divider divider-start">D</div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4  gap-4">
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    <button
+                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                        aria-label="Edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                            class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        </svg>
+                                    </button>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                        Tambahkan
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
 
-                    <div class="divider divider-start">E</div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4  gap-4">
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                            <div>
-                                <img src="pict/pict1.jpg" alt="Shoes" class="rounded-xl" />
-                                <div class="card-body" style="padding: 1rem;">
-                                    <h2 class="card-title">
-                                        Shoes!
-                                        <div class="badge badge-secondary">NEW</div>
-                                    </h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <div class="badge badge-outline">Fashion</div>
-                                        <div class="badge badge-outline">Products</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+                    <div class="divider divider-start">K</div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div
+                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg w-full"
+                                    src="https://images.tokopedia.net/img/cache/500-square/product-1/2019/3/14/43438157/43438157_cbbc8c1f-b427-4cd2-ba93-bd893f30dac0_700_700.jpg"
+                                    alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Kuas cat</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                    dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                    nisi </p>
+                                <div class="flex gap-2">
+
+                                    <button
+                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                        aria-label="Edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                            class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        </svg>
+                                    </button>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                        Tambahkan
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg w-full"
+                                    src="https://smb-padiumkm-images-public-prod.oss-ap-southeast-5.aliyuncs.com/products/69221/783818/kertas-hvs-a4s-.1662437265.jpg"
+                                    alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Kertas HVS</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">
+                                    Sinar Dunia A4 70 gram, ukuran 210 x 297 mm, kertas 700 GSM
+                                    , isi 500 lembar/rim
+                                    , harga per Rim
+                                </p>
+                                <div class="flex gap-2">
+                                    <button
+                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                        aria-label="Edit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                            class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        </svg>
+                                    </button>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                        Tambahkan
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                
-
             </main>
-            
         </div>
     </div>
 </body>
