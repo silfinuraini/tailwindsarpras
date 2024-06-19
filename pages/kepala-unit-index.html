@@ -47,7 +47,7 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul
-                        class="flex flex-col md:p-0 mt-4 font-medium border text-sm border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        class="flex flex-col md:p-0 mt-4 font-medium border text-sm border-gray-100 rounded-box bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
                             <a href="kepala-unit-index.html"
                                 class="block py-2 px-3 font-bold bg-purple-700 rounded md:bg-transparent text-purple-700 md:p-0 md:dark:text-purple-500"
@@ -58,7 +58,7 @@
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Produk</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="kontak.html"
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:purple-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Kontak</a>
                         </li>
                     </ul>
@@ -86,52 +86,20 @@
                         </li>
                         <!-- Notifications menu -->
                         <li class="relative">
-                            <button
+                            <a href="kepala-unit-laporan.html"
                                 class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
                                 @click="toggleNotificationsMenu" @keydown.escape="closeNotificationsMenu"
                                 aria-label="Notifications" aria-haspopup="true">
-                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" aria-hidden="true"
+                                    fill="currentColor"
+                                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                     <path
-                                        d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z">
-                                    </path>
+                                        d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
                                 </svg>
                                 <!-- Notification badge -->
                                 <span aria-hidden="true"
                                     class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"></span>
-                            </button>
-                            <template x-if="isNotificationsMenuOpen">
-                                <ul x-transition:leave="transition ease-in duration-150"
-                                    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-                                    @click.away="closeNotificationsMenu" @keydown.escape="closeNotificationsMenu"
-                                    class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700">
-                                    <li class="flex">
-                                        <a class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                            href="#">
-                                            <span>Messages</span>
-                                            <span
-                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600">
-                                                13
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="flex">
-                                        <a class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                            href="#">
-                                            <span>Sales</span>
-                                            <span
-                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600">
-                                                2
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="flex">
-                                        <a class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                            href="#">
-                                            <span>Alerts</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </template>
+                            </a>
                         </li>
                         <!-- Profile menu -->
                         <li class="relative">
@@ -196,7 +164,7 @@
             </div>
 
             <!-- Main -->
-            <main class="h-full overflow-y-auto bg-gray-100">
+            <main class="h-full overflow-y-auto bg-gray-50">
                 <section class="bg-white dark:bg-gray-900">
                     <div
                         class="grid gap-8 max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-6">
@@ -212,13 +180,13 @@
                                 Penggunaan</h1>
 
                             <!-- Card -->
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                            <div class="flex items-center p-4 bg-white rounded-box shadow-xs dark:bg-gray-800">
                                 <div
                                     class="p-3 mr-4 text-white bg-purple-600 rounded-full dark:text-white dark:bg-purple-700">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                         <path
-                                            d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
-                                        </path>
+                                            d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
                                     </svg>
                                 </div>
                                 <div>
@@ -231,13 +199,13 @@
                                 </div>
                             </div>
                             <!-- Card -->
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                            <div class="flex items-center p-4 bg-white rounded-box shadow-xs dark:bg-gray-800">
                                 <div
                                     class="p-3 mr-4 text-white bg-pink-400 rounded-full dark:text-white dark:bg-pink-400">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
-                                            clip-rule="evenodd"></path>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor"
+                                        viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384V352h16V480c0 17.7 14.3 32 32 32s32-14.3 32-32V192h56 64 16c17.7 0 32-14.3 32-32s-14.3-32-32-32H384V64H576V256H384V224H320v48c0 26.5 21.5 48 48 48H592c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H368c-26.5 0-48 21.5-48 48v80H243.1 177.1c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9V480c0 17.7 14.3 32 32 32s32-14.3 32-32z" />
                                     </svg>
                                 </div>
                                 <div>
@@ -250,13 +218,13 @@
                                 </div>
                             </div>
                             <!-- Card -->
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                            <div class="flex items-center p-4 bg-white rounded-box shadow-xs dark:bg-gray-800">
                                 <div
                                     class="p-3 mr-4 text-white bg-purple-600 rounded-full dark:text-white dark:bg-purple-600">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                         <path
-                                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z">
-                                        </path>
+                                            d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
                                     </svg>
                                 </div>
                                 <div>
@@ -269,7 +237,7 @@
                                 </div>
                             </div>
                             <!-- Card -->
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                            <div class="flex items-center p-4 bg-white rounded-box shadow-xs dark:bg-gray-800">
                                 <div
                                     class="p-3 mr-4 text-white bg-pink-400 rounded-full dark:text-teal-100 dark:bg-teal-500">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -293,8 +261,8 @@
                 </section>
 
                 <section>
-                    <div class="container mx-auto grid mt-5 my-10 p-2 ">
-                        <div class="mb-5 min-w-min grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-4">
+                    <div class="container  mx-auto grid mt-5 my-10 p-2 ">
+                        <div class="mb-5 min-w-min grid grid-cols-2 md:grid-cols-4 xl:grid-cols-4 gap-4">
                             <a href="pengajuan.html">
                                 <div class="bg-white shadow rounded-box p-4 sm:p-6 xl:p-8 ">
                                     <div class="flex items-center">
@@ -307,16 +275,18 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="bg-white shadow rounded-box p-4 sm:p-6 xl:p-8 ">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0">
-                                        <span
-                                            class="text-xl sm:text-2xl leading-none font-bold text-gray-900 mb-1">Diproses</span>
-                                        <h3 class="text-sm sm:text-xs font-semibold text-gray-500">User signups this
-                                            week</h3>
+                            <a href="menunggu-acc.html">
+                                <div class="bg-white shadow rounded-box p-4 sm:p-6 xl:p-8 ">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0">
+                                            <span
+                                                class="text-xl sm:text-2xl leading-none font-bold text-gray-900 mb-1">Menunggu acc  </span>
+                                            <h3 class="text-sm sm:text-xs font-semibold text-gray-500">User signups this
+                                                week</h3>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                             <a href="permintaan.html">
                                 <div class="bg-white shadow rounded-box p-4 sm:p-6 xl:p-8 ">
                                     <div class="flex items-center">
@@ -329,490 +299,502 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
-
-                        <div role="tablist" class="tabs tabs-lifted">
-                            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Pengajuan"
-                                checked />
-                            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-2">
-                                <div class="flex items-center p-4 mb-6 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                    <div class="w-full overflow-hidden rounded-lg shadow-xs">
-                                        <div class="w-full overflow-x-auto">
-                                            <table class="w-full whitespace-no-wrap">
-                                                <thead>
-                                                    <tr
-                                                        class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800">
-                                                        <th class="px-4 py-3">Kode</th>
-                                                        <th class="px-4 py-3">Status</th>
-                                                        <th class="px-4 py-3">Tanggal</th>
-                                                        <th class="px-4 py-3">Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                                                    <tr class="text-gray-700 dark:text-gray-400">
-                                                        <td class="px-4 py-3 font-semibold text-sm">
-                                                            PG001
-
-                                                        </td>
-                                                        <td class="px-4 py-3 text-xs">
-                                                            <span
-                                                                class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                                                                Disetujui
-                                                            </span>
-                                                        </td>
-                                                        <td class="px-4 py-3 text-sm">
-                                                            6/10/2020
-                                                        </td>
-                                                        <td class="px-4 py-3">
-                                                            <button
-                                                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                                aria-label="Edit">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
-                                                                    aria-hidden="true" fill="currentColor"
-                                                                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                                                    <path
-                                                                        d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
-                                                                </svg>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div
-                                            class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
-                                            <span class="flex items-center col-span-3">
-                                                Showing 21-30 of 100
-                                            </span>
-                                            <span class="col-span-2"></span>
-                                            <!-- Pagination -->
-                                            <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
-                                                <nav aria-label="Table navigation">
-                                                    <ul class="inline-flex items-center">
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
-                                                                aria-label="Previous">
-                                                                <svg aria-hidden="true" class="w-4 h-4 fill-current"
-                                                                    viewBox="0 0 20 20">
-                                                                    <path
-                                                                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                                                        clip-rule="evenodd" fill-rule="evenodd"></path>
-                                                                </svg>
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                1
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                2
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                3
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                4
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <span class="px-3 py-1">...</span>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                8
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                9
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
-                                                                aria-label="Next">
-                                                                <svg class="w-4 h-4 fill-current" aria-hidden="true"
-                                                                    viewBox="0 0 20 20">
-                                                                    <path
-                                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                                        clip-rule="evenodd" fill-rule="evenodd"></path>
-                                                                </svg>
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
-                                            </span>
+                            <a href="disetujui.html">
+                                <div class="bg-white shadow rounded-box p-4 sm:p-6 xl:p-8 ">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0">
+                                            <span
+                                                class="text-xl sm:text-2xl leading-none font-bold text-gray-900 mb-1">Disetujui</span>
+                                            <h3 class="text-sm sm:text-xs font-semibold text-gray-500">Visitors this
+                                                week</h3>
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-
-                            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Permintaan" />
-                            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-2">
-                                <div class="flex items-center p-4 mb-6 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                    <div class="w-full overflow-hidden rounded-lg shadow-xs">
-                                        <div class="w-full overflow-x-auto">
-                                            <table class="w-full whitespace-no-wrap">
-                                                <thead>
-                                                    <tr
-                                                        class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800">
-                                                        <th class="px-4 py-3">Kode</th>
-                                                        <th class="px-4 py-3">Status</th>
-                                                        <th class="px-4 py-3">Tanggal</th>
-                                                        <th class="px-4 py-3">Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                                                    <tr class="text-gray-700 dark:text-gray-400">
-                                                        <td class="px-4 py-3 font-semibold text-sm">
-                                                            PM001
-
-                                                        </td>
-                                                        <td class="px-4 py-3 text-xs">
-                                                            <span
-                                                                class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                                                                Disetujui
-                                                            </span>
-                                                        </td>
-                                                        <td class="px-4 py-3 text-sm">
-                                                            6/10/2020
-                                                        </td>
-                                                        <td class="px-4 py-3">
-                                                            <button
-                                                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                                aria-label="Edit">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
-                                                                    aria-hidden="true" fill="currentColor"
-                                                                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                                                    <path
-                                                                        d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
-                                                                </svg>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="text-gray-700 dark:text-gray-400">
-                                                        <td class="px-4 py-3 font-semibold text-sm">
-                                                            PM002
-
-                                                        </td>
-                                                        <td class="px-4 py-3 text-xs">
-                                                            <span
-                                                                class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                                                                Disetujui
-                                                            </span>
-                                                        </td>
-                                                        <td class="px-4 py-3 text-sm">
-                                                            6/10/2020
-                                                        </td>
-                                                        <td class="px-4 py-3">
-                                                            <button
-                                                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                                aria-label="Edit">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
-                                                                    aria-hidden="true" fill="currentColor"
-                                                                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                                                    <path
-                                                                        d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
-                                                                </svg>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="text-gray-700 dark:text-gray-400">
-                                                        <td class="px-4 py-3 font-semibold text-sm">
-                                                            PM002
-
-                                                        </td>
-                                                        <td class="px-4 py-3 text-xs">
-                                                            <span
-                                                                class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                                                                Disetujui
-                                                            </span>
-                                                        </td>
-                                                        <td class="px-4 py-3 text-sm">
-                                                            6/10/2020
-                                                        </td>
-                                                        <td class="px-4 py-3">
-                                                            <button
-                                                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                                aria-label="Edit">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
-                                                                    aria-hidden="true" fill="currentColor"
-                                                                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                                                    <path
-                                                                        d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
-                                                                </svg>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div
-                                            class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
-                                            <span class="flex items-center col-span-3">
-                                                Showing 21-30 of 100
-                                            </span>
-                                            <span class="col-span-2"></span>
-                                            <!-- Pagination -->
-                                            <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
-                                                <nav aria-label="Table navigation">
-                                                    <ul class="inline-flex items-center">
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
-                                                                aria-label="Previous">
-                                                                <svg aria-hidden="true" class="w-4 h-4 fill-current"
-                                                                    viewBox="0 0 20 20">
-                                                                    <path
-                                                                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                                                        clip-rule="evenodd" fill-rule="evenodd"></path>
-                                                                </svg>
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                1
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                2
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                3
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                4
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <span class="px-3 py-1">...</span>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                8
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                                                                9
-                                                            </button>
-                                                        </li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
-                                                                aria-label="Next">
-                                                                <svg class="w-4 h-4 fill-current" aria-hidden="true"
-                                                                    viewBox="0 0 20 20">
-                                                                    <path
-                                                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                                        clip-rule="evenodd" fill-rule="evenodd"></path>
-                                                                </svg>
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
+                            </a>
                         </div>
 
                         <h3 class="text-xl font-bold text-gray-900 mb-2 mt-2">Produk Display</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4">
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqzFD305OdckTcTAwYF9nW3M71w8-RkRa5JQ&s"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Kertas HVS
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="https://smb-padiumkm-images-public-prod.oss-ap-southeast-5.aliyuncs.com/products/69221/783818/kertas-hvs-a4s-.1662437265.jpg"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Kertas HVS</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">
+                                        Sinar Dunia A4 70 gram, ukuran 210 x 297 mm, kertas 700 GSM
+                                        , isi 500 lembar/rim
+                                        , harga per Rim
+
+                                    </p>
+                                    <div class="flex gap-2">
+
+                                        <button onclick="my_modal_2.showModal()"
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <dialog id="my_modal_2" class="modal">
+                                            <div class="modal-box w-11/12 max-w-5xl rounded-box">
+                                                <div
+                                                    class="grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-2">
+                                                    <figure class="px-10 p-4">
+                                                        <div class="carousel w-full">
+                                                            <div id="item1" class="carousel-item w-full">
+                                                                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/5/1/edcb8105-c50c-4b3f-a8eb-477005e300bb.png"
+                                                                    class="w-full" />
+                                                            </div>
+                                                            <div id="item3" class="carousel-item w-full">
+                                                                <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/4/22/7ab00b89-133d-4c05-b5f8-1f1ac075924e.jpg"
+                                                                    class="w-full" />
+                                                            </div>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="card-body">
+                                                        <h2 class="card-title font-bold">
+                                                            Kertas HVS
+                                                            <div class="badge badge-primary badge-outline">ATK
+                                                            </div>
+                                                        </h2>
+                                                        <div class="overflow-x-auto">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <!-- row 1 -->
+                                                                    <tr>
+                                                                        <td
+                                                                            class="col-span-3 font-extrabold text-lg">
+                                                                            Rp56.000,00
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="col-span-3 font-semibold">
+                                                                            Ketebalan 70 gsm, ukuran A4 (21 x
+                                                                            29,7
+                                                                            cm), 1 rim (500 lembar)
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <th>Kode barang</th>
+                                                                        <td>:</td>
+                                                                        <td>ATK001</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Merk</th>
+                                                                        <td>:</td>
+                                                                        <td>Sinar Dunia</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Stok</th>
+                                                                        <td>:</td>
+                                                                        <td>100</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Satuan</th>
+                                                                        <td>:</td>
+                                                                        <td>Rim</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!-- <p class="font-semibold">Kode barang: </p>
+                                                        <p class="font-semibold">Merk       : </p>
+                                                        <p class="font-semibold">Stok       : </p>
+                                                        <p class="font-semibold">Satuan     : </p>
+                                                        <p class="font-semibold">Harga      : </p>
+                                                        <p class="font-semibold">Deskripsi  : </p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <form method="dialog" class="modal-backdrop">
+                                                <button>close</button>
+                                            </form>
+                                        </dialog>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="https://img.lazcdn.com/g/ff/kf/Sdce1fc909c5143cebf4457ef942f6d5eO.jpg_720x720q80.jpg"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Pulpen
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+
+
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="data:image/jpeg;base64,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"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Pulpen</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="data:image/jpeg;base64,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"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Alat pel
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="data:image/jpeg;base64,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"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Alat pel</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="https://siopen.balangankab.go.id/storage/merchant/products/2024/03/16/d0931f9e6b4da6f2060d7c57e5dccb4c.jpg"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Serok sampah
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="https://images.tokopedia.net/img/cache/700/hDjmkQ/2022/11/13/27fcdaea-69c7-42b6-b715-9aca66aec691.jpg"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Serok sampah</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="data:image/jpeg;base64,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"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Mouse pad
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTODRz0SwjNC5By4aTiY_nhr9HQFzuEApynRw&s"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Mouse pad</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="https://siplahtelkom.com/public/products/198694/3949212/281285.f2acfc19-82ba-4f60-9629-efe825b77791.agenda-kel.jpg"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Agenda kelas
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZz-1Yc9atP-9_OmCGnH6sf42A9uGhmp8hCg&s"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Buku tulis</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGZXmttzACjvzTYPpP1lTn-WcqUA5-7h6D1Q&s"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Spidol whiteboard
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="https://image1ws.indotrading.com/s3/productimages/webp/co240310/p1170669/w425-h425/b8e9ad80-6f45-493c-8ada-4fac74cb767b.jpg"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Spidol whiteboard</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-box hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/11/26/b11cb7f1-0373-421b-946c-1d6cdf03df85.jpg"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Styrofoam
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-box shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/11/26/b11cb7f1-0373-421b-946c-1d6cdf03df85.jpg"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Styrofoam</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                                <div>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfHoC4Azu0jpQO1rSmmHlPeKp8fpsk3nCjRQ&s"
-                                        alt="Shoes" class="rounded-xl" />
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <h2 class="card-title">
-                                            Kuas cat
-                                            <div class="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
-                                            <div class="badge badge-outline">Fashion</div>
-                                            <div class="badge badge-outline">Products</div>
-                                        </div>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg w-full"
+                                        src="https://images.tokopedia.net/img/cache/500-square/product-1/2019/3/14/43438157/43438157_cbbc8c1f-b427-4cd2-ba93-bd893f30dac0_700_700.jpg"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Kuas cat</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit. Laborum voluptas laboriosam, ullam
+                                        nisi </p>
+                                    <div class="flex gap-2">
+
+                                        <button
+                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                                            aria-label="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none"
+                                                class=" opacity-70" viewBox="0 0 24 24" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                            </svg>
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                                            Tambahkan
+                                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                            <div
+                                class="flex items-center p-4 bg-white rounded-box shadow-xs max-w-sm  border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
                                 <div>
                                     <div class="card-body" style="padding: 1rem;">
                                         <h2 class="card-title">
-                                            Shoes!
-                                            <div class="badge badge-secondary">NEW</div>
+                                            Jelajahi produk lain!
                                         </h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div class="card-actions justify-end">
+                                        <div class="card-actions my-2 justify-end">
                                             <div class="badge badge-outline">
                                                 <a href="produk.html">
-                                                    <span>View more →</span>
+                                                    <span>Lebih lengkap →</span>
                                                 </a>
                                             </div>
                                         </div>

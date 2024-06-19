@@ -489,11 +489,44 @@
                         </label>
 
                         <input type="date" class="input input-bordered w-full max-w-xs" />
-                        <a href="laporan-stockopname.html"
+                        <button onclick="tambahLaporan.showModal()"
                             class=" btn ml-auto px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
                             Tambah laporan
                             <span>&RightArrow;</span>
-                        </a>
+                        </button>
+
+                        <!-- Open the modal using ID.showModal() method -->
+                        <dialog id="tambahLaporan" class="modal">
+                            <div class="modal-box">
+                                <label class="block text-sm">
+                                    <b><span class=" dark:text-gray-400 mb-2">Petugas</span></b>
+                                    <input type="text" class="input input-bordered text-sm block w-full mt-1 max-w-s"
+                                        fdprocessedid="0w827j">
+                                </label>
+                                <label class="mt-4 block text-sm">
+                                    <b><span class=" dark:text-gray-400 mb-2">Tanggal</span></b>
+                                    <input type="date" class="input input-bordered text-sm block w-full mt-1 max-w-s"
+                                        fdprocessedid="0w827j">
+                                </label>
+                                <label class="mt-4 block text-sm">
+                                    <b><span class=" dark:text-gray-400 mb-2">Kategori</span></b>
+                                    <select class="select block select-bordered w-full ">
+                                        <option disabled selected>Pilih kategori</option>
+                                        <option>ATK</option>
+                                        <option>Alat kebersihan</option>
+                                        <option>Alat bangunan</option>
+                                    </select>
+                                </label>
+
+                                <button
+                                    class="px-4 mt-4 ml-auto py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                                    Buat
+                                </button>
+                            </div>
+                            <form method="dialog" class="modal-backdrop">
+                                <button>close</button>
+                            </form>
+                        </dialog>
 
                         <button
                             class=" btn flex items-center justify-between px-4 py-2 text-sm font-medium  text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple ml-auto">
@@ -619,16 +652,17 @@
                                                                                         </div>
                                                                                         <div>
                                                                                             <p class="font-semibold">
-                                                                                            Pulpen
+                                                                                                Pulpen
                                                                                             </p>
-                                                                                            <p class="text-xs text-gray-600 dark:text-gray-400">
+                                                                                            <p
+                                                                                                class="text-xs text-gray-600 dark:text-gray-400">
                                                                                                 ATK
                                                                                             </p>
                                                                                         </div>
                                                                                     </div>
                                                                                 </td>
                                                                                 <td class="px-4 py-3 text-sm">
-                                                                                Pack
+                                                                                    Pack
                                                                                 </td>
                                                                                 <td class="px-4 py-3 text-xs">
                                                                                     50

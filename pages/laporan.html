@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen}">
+  <div class="flex h-screen  dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen}">
     <!-- Desktop sidebar -->
     <aside class="relative z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
       <div class="py-4 text-gray-500 dark:text-gray-400">
@@ -66,7 +66,7 @@
                 x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl"
                 x-transition:leave="transition-all ease-in-out duration-300"
                 x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0"
-                class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+                class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner  dark:text-gray-400 dark:bg-gray-900"
                 aria-label="submenu">
                 <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
                   <a class="w-full" href="data-barang.html">
@@ -244,7 +244,7 @@
                 x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl"
                 x-transition:leave="transition-all ease-in-out duration-300"
                 x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0"
-                class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+                class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner  dark:text-gray-400 dark:bg-gray-900"
                 aria-label="submenu">
                 <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
                   <a class="w-full" href="pages/login.html">Login</a>
@@ -475,244 +475,246 @@
             </button>
           </div>
           <!-- Table With Action -->
-          <div class="w-full overflow-hidden rounded-lg shadow-xs mb-2">
-            <div class="w-full overflow-x-auto">
-              <table class="w-full whitespace-no-wrap">
-                <thead>
-                  <tr
-                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                    <th class="px-4 py-3">Kode</th>
-                    <th class="px-4 py-3">Barang</th>
-                    <th class="px-4 py-3">Merk</th>
-                    <th class="px-4 py-3">Stok</th>
-                    <th class="px-4 py-3">Stok Awal</th>
-                    <th class="px-4 py-3">Stok Keluar</th>
-                    <th class="px-4 py-3">Satuan</th>
-                  </tr>
-                </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                  <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3 text-sm font-semibold">
-                      BK001
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&facepad=3&fit=facearea&s=707b9c33066bf8808c934c8ab394dff6"
-                            alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+          <div class="flex items-center p-4 bg-white rounded-box shadow-xs dark:bg-gray-800">
+            <div class="w-full overflow-hidden rounded-lg shadow-xs mb-2">
+              <div class="w-full overflow-x-auto">
+                <table class="w-full whitespace-no-wrap">
+                  <thead>
+                    <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700  dark:text-gray-400 dark:bg-gray-800">
+                      <th class="px-4 py-3">Kode</th>
+                      <th class="px-4 py-3">Barang</th>
+                      <th class="px-4 py-3">Merk</th>
+                      <th class="px-4 py-3">Stok</th>
+                      <th class="px-4 py-3">Stok Awal</th>
+                      <th class="px-4 py-3">Stok Keluar</th>
+                      <th class="px-4 py-3">Satuan</th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                    <tr class="text-gray-700 dark:text-gray-400">
+                      <td class="px-4 py-3 text-sm font-semibold">
+                        BK001
+                      </td>
+                      <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
+                          <!-- Avatar with inset shadow -->
+                          <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                            <img class="object-cover w-full h-full rounded-full"
+                              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&facepad=3&fit=facearea&s=707b9c33066bf8808c934c8ab394dff6"
+                              alt="" loading="lazy" />
+                            <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                          </div>
+                          <div>
+                            <p class="font-semibold">Kertas HVS</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">
+                              ATK
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p class="font-semibold">Kertas HVS</p>
-                          <p class="text-xs text-gray-600 dark:text-gray-400">
-                            ATK
-                          </p>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Sinar Dunia
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        100
+                      </td>
+  
+                      <td class="px-4 py-3 text-xs">
+                        120
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        20
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Rim
+                      </td>
+                    </tr>
+  
+                    <tr class="text-gray-700 dark:text-gray-400">
+                      <td class="px-4 py-3 text-sm font-semibold">
+                        BK001
+                      </td>
+                      <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
+                          <!-- Avatar with inset shadow -->
+                          <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                            <img class="object-cover w-full h-full rounded-full"
+                              src="https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
+                              alt="" loading="lazy" />
+                            <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                          </div>
+                          <div>
+                            <p class="font-semibold">Sapu</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">
+                              Alat kebersihan
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Sinar Dunia
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      100
-                    </td>
-
-                    <td class="px-4 py-3 text-xs">
-                      120
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      20
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Rim
-                    </td>
-                  </tr>
-
-                  <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3 text-sm font-semibold">
-                      BK001
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                            alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Polytron
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        54
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        60
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        6
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Pcs
+                      </td>
+                    </tr>
+  
+                    <tr class="text-gray-700 dark:text-gray-400">
+                      <td class="px-4 py-3 text-sm font-semibold">
+                        BK002
+                      </td>
+                      <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
+                          <!-- Avatar with inset shadow -->
+                          <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                            <img class="object-cover w-full h-full rounded-full"
+                              src="https://images.unsplash.com/photo-1551006917-3b4c078c47c9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
+                              alt="" loading="lazy" />
+                            <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                          </div>
+                          <div>
+                            <p class="font-semibold">Cat tembok</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">
+                              Alat bangunan
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p class="font-semibold">Sapu</p>
-                          <p class="text-xs text-gray-600 dark:text-gray-400">
-                            Alat kebersihan
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Polytron
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      54
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      60
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      6
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Pcs
-                    </td>
-                  </tr>
-
-                  <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3 text-sm font-semibold">
-                      BK002
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1551006917-3b4c078c47c9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                            alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">Cat tembok</p>
-                          <p class="text-xs text-gray-600 dark:text-gray-400">
-                            Alat bangunan
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Nippon
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      32
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      40
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      8
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Pcs
-                    </td>
-                  </tr>
-
-                  <tr class="text-gray-700 dark:text-gray-400">
-                    <td class="px-4 py-3 text-sm font-semibold">
-                      BK003
-                    </td>
-                    <td class="px-4 py-3">
-                      <div class="flex items-center text-sm">
-                        <!-- Avatar with inset shadow -->
-                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                          <img class="object-cover w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1546456073-6712f79251bb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                            alt="" loading="lazy" />
-                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                        </div>
-                        <div>
-                          <p class="font-semibold">Amplas</p>
-                          <p class="text-xs text-gray-600 dark:text-gray-400">
-                            Alat bangunan
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Crona
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      15
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      18
-                    </td>
-                    <td class="px-4 py-3 text-xs">
-                      3
-                    </td>
-                    <td class="px-4 py-3 text-sm">
-                      Pcs
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
-              <span class="flex items-center col-span-3">
-                Showing 21-30 of 100
-              </span>
-              <span class="col-span-2"></span>
-              <!-- Pagination -->
-              <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
-                <nav aria-label="Table navigation">
-                  <ul class="inline-flex items-center">
-                    <li>
-                      <button class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
-                        aria-label="Previous">
-                        <svg class="w-4 h-4 fill-current" aria-hidden="true" viewBox="0 0 20 20">
-                          <path
-                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                            clip-rule="evenodd" fill-rule="evenodd"></path>
-                        </svg>
-                      </button>
-                    </li>
-                    <li>
-                      <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                        1
-                      </button>
-                    </li>
-                    <li>
-                      <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                        2
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple">
-                        3
-                      </button>
-                    </li>
-                    <li>
-                      <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                        4
-                      </button>
-                    </li>
-                    <li>
-                      <span class="px-3 py-1">...</span>
-                    </li>
-                    <li>
-                      <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Nippon
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        32
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        40
+                      </td>
+                      <td class="px-4 py-3 text-xs">
                         8
-                      </button>
-                    </li>
-                    <li>
-                      <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                        9
-                      </button>
-                    </li>
-                    <li>
-                      <button class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
-                        aria-label="Next">
-                        <svg class="w-4 h-4 fill-current" aria-hidden="true" viewBox="0 0 20 20">
-                          <path
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd" fill-rule="evenodd"></path>
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                </nav>
-              </span>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Pcs
+                      </td>
+                    </tr>
+  
+                    <tr class="text-gray-700 dark:text-gray-400">
+                      <td class="px-4 py-3 text-sm font-semibold">
+                        BK003
+                      </td>
+                      <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
+                          <!-- Avatar with inset shadow -->
+                          <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                            <img class="object-cover w-full h-full rounded-full"
+                              src="https://images.unsplash.com/photo-1546456073-6712f79251bb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
+                              alt="" loading="lazy" />
+                            <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                          </div>
+                          <div>
+                            <p class="font-semibold">Amplas</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">
+                              Alat bangunan
+                            </p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Crona
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        15
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        18
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        3
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        Pcs
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700  sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
+                <span class="flex items-center col-span-3">
+                  Showing 21-30 of 100
+                </span>
+                <span class="col-span-2"></span>
+                <!-- Pagination -->
+                <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
+                  <nav aria-label="Table navigation">
+                    <ul class="inline-flex items-center">
+                      <li>
+                        <button class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
+                          aria-label="Previous">
+                          <svg class="w-4 h-4 fill-current" aria-hidden="true" viewBox="0 0 20 20">
+                            <path
+                              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                              clip-rule="evenodd" fill-rule="evenodd"></path>
+                          </svg>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
+                          1
+                        </button>
+                      </li>
+                      <li>
+                        <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
+                          2
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple">
+                          3
+                        </button>
+                      </li>
+                      <li>
+                        <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
+                          4
+                        </button>
+                      </li>
+                      <li>
+                        <span class="px-3 py-1">...</span>
+                      </li>
+                      <li>
+                        <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
+                          8
+                        </button>
+                      </li>
+                      <li>
+                        <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
+                          9
+                        </button>
+                      </li>
+                      <li>
+                        <button class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
+                          aria-label="Next">
+                          <svg class="w-4 h-4 fill-current" aria-hidden="true" viewBox="0 0 20 20">
+                            <path
+                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                              clip-rule="evenodd" fill-rule="evenodd"></path>
+                          </svg>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </span>
+              </div>
             </div>
           </div>
         </div>
